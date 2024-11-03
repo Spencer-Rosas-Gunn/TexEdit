@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <script src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css"></style>
+</head>
+
+<body>
+  <div id="bar">
+    <input type="text" placeholder="Name of texture" id="myInput"></input>
+    <div id="pixel-editor"></div>
+    <div id="color-palette"></div> 
+    <button onclick="generateHppFile('pixel-editor', document.getElementById('myInput').value, 'text-buf');">Render</button>
+    <button onclick="copyToClipboard();">Copy to Clipboard</button>
+  </div> 
+
+  <pre id="text-buf"></pre>
+</body>
+
+<script>
+  createPixelEditor('pixel-editor', 4, 100); 
+</script>
